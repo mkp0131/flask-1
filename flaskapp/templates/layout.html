@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플라스크</title>
+</head>
+<body>
+  {% macro test_macro(title) -%}
+    <h2>{{title}}</h2>
+    <div>{{caller()}}</div>
+  {%- endmacro %}
+
+
+  <header>THIS IS HEADER</header>
+  <section>
+    {% block section %} THIS IS SECTION {% endblock %}
+    {% block list %} HIS IS SECTION {% endblock %}
+  </section>
+  <footer>THIS IS FOOTER</footer>
+</body>
+</html>
